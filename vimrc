@@ -175,6 +175,7 @@ let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_filetype_whitelist = {
 			\ "c":1,
 			\ "cpp":1,
+            \ "python":1,
 			\ "objc":1,
 			\ "sh":1,
 			\ "zsh":1,
