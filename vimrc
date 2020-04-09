@@ -97,10 +97,16 @@ Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp':'after'}
 Plugin 'preservim/nerdcommenter'
+Plugin 'mbbill/undotree'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" undotree
+nnoremap <F5> :UndotreeToggle<cr>
+set undofile
+set undodir=$HOME/.vim/undo   " make sure this dir exists
 
 " ack.vim
 map <c-e> :Ack!<space>
