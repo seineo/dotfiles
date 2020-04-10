@@ -7,3 +7,5 @@
 [user]
 	name = seineo
 	email = 1013248644qq@gmail.com
+[core]
+	excludesfile = /home/seineo/.gitignore_global
