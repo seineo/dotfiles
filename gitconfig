@@ -1,0 +1,9 @@
+[alias]
+    br = branch -vv
+    ci = commit -v
+    co = checkout
+    gr = log --all --graph --decorate
+    gro = log --all --graph --decorate --oneline
+[user]
+	name = seineo
+	email = 1013248644qq@gmail.com
