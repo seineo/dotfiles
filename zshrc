@@ -103,5 +103,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh" 
 
 alias ll="ls -lh"
+alias gs="git status"
 alias mv="mv -i"        # -i prompts before overwrite
 alias mkdir="mkdir -p"  # -p make parent dirs as needed
