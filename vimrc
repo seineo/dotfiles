@@ -59,8 +59,8 @@ set noerrorbells visualbell t_vb=
 set splitbelow
 set splitright
 
-" , -> <leader>
-let mapleader=","
+" ; -> <leader>
+let mapleader=";"
 
 "---------------------
 " Plugin configuration
