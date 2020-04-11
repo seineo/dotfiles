@@ -59,9 +59,6 @@ set noerrorbells visualbell t_vb=
 set splitbelow
 set splitright
 
-" jk -> esc
-inoremap jk <esc>
-
 " , -> <leader>
 let mapleader=","
 
