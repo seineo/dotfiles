@@ -95,6 +95,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp':'after'}
 Plugin 'preservim/nerdcommenter'
 Plugin 'mbbill/undotree'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -125,14 +127,14 @@ let g:NERDTreeHidden=0
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " powerline
-set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-let g:minBufExplForceSyntaxEnable = 1
-python3 from powerline.vim import setup as powerline_setup
-python3 powerline_setup()
-python3 del powerline_setup
-set laststatus=2
-set guifont=Source\ Code\ Pro\ for\ Powerline:h12
-set noshowmode
+"set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+"let g:minBufExplForceSyntaxEnable = 1
+"python3 from powerline.vim import setup as powerline_setup
+"python3 powerline_setup()
+"python3 del powerline_setup
+"set laststatus=2
+"set guifont=Source\ Code\ Pro\ for\ Powerline:h12
+"set noshowmode
 
 " markdown
 let g:markdown_fenced_languages = [
