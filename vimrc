@@ -126,15 +126,8 @@ let g:NERDTreeHidden=0
 " close nerdtree if the last file closed
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" powerline
-"set rtp+=/usr/local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-"let g:minBufExplForceSyntaxEnable = 1
-"python3 from powerline.vim import setup as powerline_setup
-"python3 powerline_setup()
-"python3 del powerline_setup
-"set laststatus=2
-"set guifont=Source\ Code\ Pro\ for\ Powerline:h12
-"set noshowmode
+" nerdcommenter
+let g:NERDSpaceDelims = 1
 
 " markdown
 let g:markdown_fenced_languages = [
