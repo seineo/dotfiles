@@ -19,6 +19,8 @@ colorscheme solarized
 filetype plugin indent on " enable file type detection
 set autoindent
 
+set pastetoggle=<F9> " set toggle for pasting code indent
+
 "---------------------
 " Basic editing config
 "---------------------
