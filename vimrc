@@ -153,7 +153,7 @@ let g:vim_markdown_toc_autofit = 1
 " ultisnips
 let g:UltiSnipsExpandTrigger="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
-let g:UltiSnipsJumpBackwardTrgger="<leader><tab>"
+let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
 let g:UltiSnipsListSnippets="<c-e>"
 
 " ycm
