@@ -165,6 +165,7 @@ highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
 highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
 set completeopt=menu,menuone
 let g:ycm_enable_diagnostic_signs = 0
+map <F12> :YcmCompleter FixIt<CR>
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_seed_identifiers_with_syntax = 1
