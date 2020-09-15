@@ -49,6 +49,7 @@ set smartcase
 set wildmode=longest,list
 set wildmenu
 set mouse+=a " enable mouse mode (scrolling, selection, etc)
+set signcolumn=yes
 
 "--------------------
 " Misc configurations
@@ -94,7 +95,6 @@ Plugin 'honza/vim-snippets'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'suan/vim-instant-markdown', {'rtp':'after'}
 Plugin 'preservim/nerdcommenter'
 Plugin 'mbbill/undotree'
 Plugin 'vim-airline/vim-airline'
@@ -131,40 +131,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " nerdcommenter
 let g:NERDSpaceDelims = 1
 
-" markdown
-let g:markdown_fenced_languages = [
-    \ 'bash=sh',
-    \ 'c',
-    \ 'cpp',
-    \ 'coffee',
-    \ 'erb=eruby',
-    \ 'javascript',
-    \ 'json',
-    \ 'perl',
-    \ 'python',
-    \ 'ruby',
-    \ 'yaml',
-    \ 'go',
-\]
-
-set conceallevel=2
-let g:vim_markdown_toc_autofit = 1
-
 " ultisnips
 let g:UltiSnipsExpandTrigger="<leader><tab>"
 let g:UltiSnipsJumpForwardTrigger="<leader><tab>"
 let g:UltiSnipsJumpBackwardTrigger="<leader><s-tab>"
-let g:UltiSnipsListSnippets="<c-e>"
 
 " ycm
-let g:ycm_semantic_triggers =  {
-			\ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
-			\ 'cs,lua,javascript': ['re!\w{2}'],
-			\ }
-highlight PMenu ctermfg=0 ctermbg=242 guifg=black guibg=darkgrey
-highlight PMenuSel ctermfg=242 ctermbg=8 guifg=darkgrey guibg=black
-set completeopt=menu,menuone
-let g:ycm_enable_diagnostic_signs = 0
 map <F12> :YcmCompleter FixIt<CR>
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
@@ -173,16 +145,6 @@ let g:ycm_min_num_identifier_candidate_chars = 2
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings=1
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_filetype_whitelist = {
-			\ "c":1,
-			\ "cpp":1,
-            \ "python":1,
-			\ "objc":1,
-			\ "sh":1,
-			\ "zsh":1,
-			\ "zimbu":1,
-			\ }
 
 " ctrl+j jump to definition or declaration
 nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|
