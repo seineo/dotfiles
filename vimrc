@@ -65,6 +65,12 @@ set splitright
 " ; -> <leader>
 let mapleader=";"
 
+" brackets completion
+inoremap ' ''<ESC>i
+inoremap " ""<ESC>i
+inoremap ( ()<ESC>i
+inoremap [ []<ESC>i
+inoremap { {<CR>}<ESC>O
 "---------------------
 " Plugin configuration
 "---------------------
