@@ -65,12 +65,6 @@ set splitright
 " ; -> <leader>
 let mapleader=";"
 
-" brackets completion
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap { {}<ESC>i
 "---------------------
 " Plugin configuration
 "---------------------
@@ -105,6 +99,7 @@ Plugin 'preservim/nerdcommenter'
 Plugin 'mbbill/undotree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jiangmiao/auto-pairs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -117,12 +112,16 @@ set undodir=$HOME/.vim/undo   " make sure this dir exists
 
 " ack.vim
 map <c-e> :Ack!<space>
-command -nargs=+ Gag Gcd | Ack! <args>
-nnoremap K :Gag "\b<C-R><C-W>\b"<CR>:cw<CR>
+" let g:ackprg = 'ag --nogroup --nocolor --column'
 if executable('ag')
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+    " let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
     let g:ackprg = 'ag --vimgrep'
 endif
+" highlight key word
+let g:ackhighlight = 1
+let g:ack_qhandler = "botright copen 15"
+let g:ack_autoclose = 1
+let g:ack_use_cword_for_empty_search = 1
 
 " ctrlp
 let g:ctrlp_map = '<c-p>'
